@@ -27,5 +27,6 @@ int	main(int argc, char **argv)
 	}
 	fd = open(argv[1], O_RDONLY);
 	print_file(fd);
+	close(fd);
 	return (0);
 }
