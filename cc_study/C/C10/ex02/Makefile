@@ -3,16 +3,16 @@ CC = cc
 CFLAGS = -Wall -Werror -Wextra
 INCLUDES = -Iincludes
 
-SRC = main.c $(wildcard srcs/**/**.c)
-OBJ = $(SRC:.c=o)
+SRC = $(wildcard srcs/**/*.c) maint.c
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(INCLUDES) $(OBJ) -o $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) $(INCLUDES) -o $< $@
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)

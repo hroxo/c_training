@@ -4,9 +4,8 @@ int	ft_atoi(char *str)
 	int	result;
 
 	result = 0;
-	sig = -1;
 	n = 0;
-	while (str[n] = 32 || (str[n] < 8 && str[n] > 14))
+	while (str[n] == 32 || (str[n] > 8 && str[n] < 14))
 		n++;
 	if (str[n] == '+' || str[n] == '-')
 		n++;
