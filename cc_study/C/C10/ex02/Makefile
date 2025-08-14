@@ -3,7 +3,7 @@ CC = cc
 CFLAGS = -Wall -Werror -Wextra
 INCLUDES = -Iincludes
 
-SRC = $(wildcard srcs/**/*.c) maint.c
+SRC = $(wildcard srcs/**/*.c) main.c
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
