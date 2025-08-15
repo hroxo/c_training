@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include "header.h"
-#include <stdio.h> //TODO REMOVE Me
 
 #define BUF_SIZE 1024
 
@@ -21,7 +20,7 @@ char	 *tail_text(int fd, int bit_cap)
 	i = 0;
 	size = 0;
 	f_r = read(fd, buf, BUF_SIZE);
-	file_text = malloc (sizeof(char) * BUF_SIZE);
+	file_text = malloc (sizeof(char) * BUF_SIZE + 1);
 	if (!file_text)
 		return (NULL);
 	file_text[0] = 0;
@@ -66,7 +65,6 @@ char	 *tail_text(int fd, int bit_cap)
 		i++;
 	}
 	tot[i] = 0;
-	printf("==========> TOT <==========\n%s\n", tot); //TODO Remove me
 	free(file_text);
 	return (tot);
 }
