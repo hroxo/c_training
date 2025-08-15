@@ -1,4 +1,4 @@
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strncat(char *dest, char *src, int size)
 {
 	int	n;
 	int	i;
@@ -7,7 +7,7 @@ char	*ft_strcat(char *dest, char *src)
 	n = 0;
 	while (dest[i])
 		i++;
-	while (src[n])
+	while (src[n] && n < size)
 	{
 		dest[i] = src[n];
 		i++;
