@@ -2,6 +2,7 @@
 #define HEADER_H
 
 int		ft_atoi(char *str);
+void	print_error(char *file);
 int		ft_strcmp(char *s1, char *s2);
 int		check_flag(char *c_flag, char *nbyte);
 int		ft_strlen(char *str);
