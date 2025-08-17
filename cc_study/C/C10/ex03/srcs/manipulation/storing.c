@@ -1,11 +1,13 @@
 #include "struct.h"
 #include <unistd.h>
 #include <stdlib.h>
+#include "header.h"
+#include <stdio.h>
 
-t_map	*new_house(t_map *old, int cap, int size)
+static t_map	*new_house(t_map *old, int cap, int size)
 {
 	int	i;
-	t_map new_s;
+	t_map *new_s;
 	int	j;
 
 	i = 0;
@@ -57,6 +59,7 @@ t_map *file_to_string(int fd, int *size)
 		}
 		file_string[i].letter = buf;
 		convert_to_hex(buf, file_string[i].hex_value);
+		printf("CHECKPOINT:\ni is %i\nhex is %s\n", i, file_string[i].hex_value);
 		reader = read(fd, &buf, 1);
 		i++;
 	}
