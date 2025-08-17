@@ -2,7 +2,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "header.h"
-#include <stdio.h>
 
 static t_map	*new_house(t_map *old, int cap, int size)
 {
@@ -59,7 +58,6 @@ t_map *file_to_string(int fd, int *size)
 		}
 		file_string[i].letter = buf;
 		convert_to_hex(buf, file_string[i].hex_value);
-		printf("CHECKPOINT:\ni is %i\nhex is %s\n", i, file_string[i].hex_value);
 		reader = read(fd, &buf, 1);
 		i++;
 	}

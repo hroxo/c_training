@@ -16,7 +16,9 @@ int main(int argc, char **argv)
 	printf("%s", out[i].hex_value);
 	while (j < i)
 	{
-		printf("%s", out[i].hex_value);
+		if (j % 16 == 0)
+			write(1, "\n", 1);
+		ft_putstr(out[j].hex_value); //TODO putstr
 		j++;
 	}
 	free(out);
