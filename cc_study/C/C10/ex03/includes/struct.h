@@ -1,6 +1,6 @@
 #ifndef STRUCT_H
 #define STRUCT_H
- 
+ ola
  typedef struct  s_map
  {
       char    letter;
