@@ -1,4 +1,4 @@
-NAME = do_op
+NAME = do-op
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 INCLUDES = -Iincludes
